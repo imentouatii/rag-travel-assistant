@@ -1,0 +1,110 @@
+{
+  "model": "qwen2.5:0.5b",
+  "evaluation_method": "Prompt strategies are evaluated across multiple queries using fact coverage, completeness, and a combined quality score. Fact coverage measures the proportion of predefined context facts included in the generated answer.",
+  "test_cases": 5,
+  "strategies": {
+    "concise_grounded": {
+      "description": "Concise answer focused strictly on the supplied context.",
+      "queries_evaluated": 5,
+      "average_fact_coverage": 0.8,
+      "average_completeness": 0.27,
+      "average_quality_score": 0.694,
+      "average_word_count": 16.2
+    },
+    "structured_expert": {
+      "description": "Structured local-guide response while remaining grounded in context.",
+      "queries_evaluated": 5,
+      "average_fact_coverage": 0.8833,
+      "average_completeness": 0.5333,
+      "average_quality_score": 0.8133,
+      "average_word_count": 77.0
+    }
+  },
+  "best_approach": "structured_expert",
+  "per_query_results": {
+    "concise_grounded": [
+      {
+        "query": "What are some hidden gems and local transit tips in Paris?",
+        "fact_coverage": 1.0,
+        "completeness": 0.25,
+        "quality_score": 0.85,
+        "word_count": 15,
+        "output": "- Petite Ceinture railway\n- La Coulée Verte\n- Navigo Easy pass for public transportation"
+      },
+      {
+        "query": "What should I know about food and culture in Tokyo?",
+        "fact_coverage": 1.0,
+        "completeness": 0.35,
+        "quality_score": 0.87,
+        "word_count": 21,
+        "output": "Tokyo offers sushi, ramen, and izakaya dining. Visitors should avoid tipping in most restaurants and be considerate when using public spaces."
+      },
+      {
+        "query": "What are some cultural etiquette tips for Kyoto?",
+        "fact_coverage": 0.25,
+        "completeness": 0.2667,
+        "quality_score": 0.2533,
+        "word_count": 16,
+        "output": "1. Keep your voice low in traditional areas.\n2. Follow local customs when entering certain buildings."
+      },
+      {
+        "query": "What safety advice is useful for travelers in Rome?",
+        "fact_coverage": 1.0,
+        "completeness": 0.3833,
+        "quality_score": 0.8767,
+        "word_count": 23,
+        "output": "Travelers in Rome should take care of personal belongings in crowded tourist areas, remain aware of their surroundings, and use official transportation services."
+      },
+      {
+        "query": "What public transportation options are useful in London?",
+        "fact_coverage": 0.75,
+        "completeness": 0.1,
+        "quality_score": 0.62,
+        "word_count": 6,
+        "output": "1. Underground\n2. Buses\n3. Overground"
+      }
+    ],
+    "structured_expert": [
+      {
+        "query": "What are some hidden gems and local transit tips in Paris?",
+        "fact_coverage": 0.6667,
+        "completeness": 1.0,
+        "quality_score": 0.7333,
+        "word_count": 285,
+        "output": "Some hidden gems and local transit tips in Paris include:\n\n1. Petite Ceinture railway: This railway line is a lesser-known attraction in Paris, offering scenic views and a unique way to explore the city.\n\n2. La Coulée Verte: This is a scenic park located in the Montmartre area of Paris, offering a peaceful and picturesque spot for relaxation and reflection.\n\n3. The Musée d'Orsay: This museum is a must-visit attraction in Paris, offering a glimpse into the world of art and a chance to see some of the most famous works of art in the world.\n\n4. The Eiffel Tower: While not a hidden gem, the Eiffel Tower is a popular landmark in Paris and offers a panoramic view of the city.\n\n5. The Louvre: This museum is a major attraction in Paris, offering a vast collection of art and artifacts from the Renaissance to the present day.\n\n6. The Montmartre neighborhood: This area of Paris is known for its charming streets, cafes, and shops, offering a unique and authentic Parisian experience.\n\n7. The Montmartre neighborhood: This area of Paris is known for its charming streets, cafes, and shops, offering a unique and authentic Parisian experience.\n\n8. The Champs-Élysées: This historic avenue is a must-visit attraction in Paris, offering a glimpse into the city's past and present.\n\n9. The Place de la Concorde: This historic square is a popular spot for locals and tourists alike, offering a panoramic view of the city and a chance to enjoy the city's famous landmarks.\n\n10. The Place de la Concorde: This historic square is a popular spot for locals and tourists alike, offering a panoramic view of the city and a chance to enjoy the city's famous landmarks."
+      },
+      {
+        "query": "What should I know about food and culture in Tokyo?",
+        "fact_coverage": 0.75,
+        "completeness": 0.5,
+        "quality_score": 0.7,
+        "word_count": 30,
+        "output": "Tokyo is a city known for its diverse cuisine, including sushi, ramen, and izakaya. Visitors should be mindful of tipping in most restaurants and be considerate when using public spaces."
+      },
+      {
+        "query": "What are some cultural etiquette tips for Kyoto?",
+        "fact_coverage": 1.0,
+        "completeness": 0.4,
+        "quality_score": 0.88,
+        "word_count": 24,
+        "output": "In Kyoto, visitors should be respectful at temples and shrines, keep voices low in traditional areas, and follow local customs when entering certain buildings."
+      },
+      {
+        "query": "What safety advice is useful for travelers in Rome?",
+        "fact_coverage": 1.0,
+        "completeness": 0.45,
+        "quality_score": 0.89,
+        "word_count": 27,
+        "output": "Safety advice for travelers in Rome includes being aware of your surroundings, using official transportation services, and taking care of your personal belongings in crowded tourist areas."
+      },
+      {
+        "query": "What public transportation options are useful in London?",
+        "fact_coverage": 1.0,
+        "completeness": 0.3167,
+        "quality_score": 0.8633,
+        "word_count": 19,
+        "output": "London's public transportation network includes the Underground, buses, and Overground services. Contactless payment can be used on many services."
+      }
+    ]
+  }
+}

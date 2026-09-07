@@ -1,0 +1,632 @@
+{
+  "embedding_model": "nomic-embed-text",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "k": 5,
+  "evaluation_queries": 15,
+  "evaluation_method": "Relevance labels are defined from the known city/category metadata of the synthetic benchmark corpus.",
+  "strategies": {
+    "vector": {
+      "queries": 15,
+      "hit_at_5": 0.5333,
+      "recall_at_5": 0.2667,
+      "precision_at_5": 0.24,
+      "mrr_at_5": 0.5333
+    },
+    "bm25": {
+      "queries": 15,
+      "hit_at_5": 0.5333,
+      "recall_at_5": 0.4,
+      "precision_at_5": 0.1733,
+      "mrr_at_5": 0.24
+    },
+    "hybrid_rrf": {
+      "queries": 15,
+      "hit_at_5": 0.5333,
+      "recall_at_5": 0.2667,
+      "precision_at_5": 0.12,
+      "mrr_at_5": 0.5333
+    },
+    "hybrid_rrf_reranker": {
+      "queries": 15,
+      "hit_at_5": 0.5333,
+      "recall_at_5": 0.5333,
+      "precision_at_5": 0.24,
+      "mrr_at_5": 0.5333
+    }
+  },
+  "best_strategy": "hybrid_rrf_reranker",
+  "per_query_results": {
+    "vector": [
+      {
+        "query": "best food and dining spots in Paris",
+        "relevant_documents": [
+          "doc_5",
+          "DOC-0006"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Paris public transportation and metro tips",
+        "relevant_documents": [
+          "doc_6",
+          "DOC-0007"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Paris food and transit recommendations",
+        "relevant_documents": [
+          "doc_5",
+          "doc_6",
+          "DOC-0006",
+          "DOC-0007"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.8,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo local food recommendations",
+        "relevant_documents": [
+          "doc_0",
+          "DOC-0001"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo subway and transportation tips",
+        "relevant_documents": [
+          "doc_1",
+          "DOC-0002"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo cultural etiquette for visitors",
+        "relevant_documents": [
+          "doc_2",
+          "DOC-0003"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Rome hidden gems and unusual places",
+        "relevant_documents": [
+          "doc_13",
+          "DOC-0014"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Rome safety advice for travelers",
+        "relevant_documents": [
+          "doc_14",
+          "DOC-0015"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "London food and dining guide",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "London public transit tips",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Kyoto culture and etiquette tips",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Bangkok hidden gems",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Barcelona travel safety advice",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Cairo local food recommendations",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Reykjavik transportation information",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      }
+    ],
+    "bm25": [
+      {
+        "query": "best food and dining spots in Paris",
+        "relevant_documents": [
+          "doc_5",
+          "DOC-0006"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Paris public transportation and metro tips",
+        "relevant_documents": [
+          "doc_6",
+          "DOC-0007"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 0.2
+      },
+      {
+        "query": "Paris food and transit recommendations",
+        "relevant_documents": [
+          "doc_5",
+          "doc_6",
+          "DOC-0006",
+          "DOC-0007"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 0.3333
+      },
+      {
+        "query": "Tokyo local food recommendations",
+        "relevant_documents": [
+          "doc_0",
+          "DOC-0001"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 0.2
+      },
+      {
+        "query": "Tokyo subway and transportation tips",
+        "relevant_documents": [
+          "doc_1",
+          "DOC-0002"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo cultural etiquette for visitors",
+        "relevant_documents": [
+          "doc_2",
+          "DOC-0003"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 0.2
+      },
+      {
+        "query": "Rome hidden gems and unusual places",
+        "relevant_documents": [
+          "doc_13",
+          "DOC-0014"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 0.3333
+      },
+      {
+        "query": "Rome safety advice for travelers",
+        "relevant_documents": [
+          "doc_14",
+          "DOC-0015"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 0.3333
+      },
+      {
+        "query": "London food and dining guide",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "London public transit tips",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Kyoto culture and etiquette tips",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Bangkok hidden gems",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Barcelona travel safety advice",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Cairo local food recommendations",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Reykjavik transportation information",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      }
+    ],
+    "hybrid_rrf": [
+      {
+        "query": "best food and dining spots in Paris",
+        "relevant_documents": [
+          "doc_5",
+          "DOC-0006"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Paris public transportation and metro tips",
+        "relevant_documents": [
+          "doc_6",
+          "DOC-0007"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Paris food and transit recommendations",
+        "relevant_documents": [
+          "doc_5",
+          "doc_6",
+          "DOC-0006",
+          "DOC-0007"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo local food recommendations",
+        "relevant_documents": [
+          "doc_0",
+          "DOC-0001"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo subway and transportation tips",
+        "relevant_documents": [
+          "doc_1",
+          "DOC-0002"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo cultural etiquette for visitors",
+        "relevant_documents": [
+          "doc_2",
+          "DOC-0003"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Rome hidden gems and unusual places",
+        "relevant_documents": [
+          "doc_13",
+          "DOC-0014"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Rome safety advice for travelers",
+        "relevant_documents": [
+          "doc_14",
+          "DOC-0015"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 0.5,
+        "precision_at_5": 0.2,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "London food and dining guide",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "London public transit tips",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Kyoto culture and etiquette tips",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Bangkok hidden gems",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Barcelona travel safety advice",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Cairo local food recommendations",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Reykjavik transportation information",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      }
+    ],
+    "hybrid_rrf_reranker": [
+      {
+        "query": "best food and dining spots in Paris",
+        "relevant_documents": [
+          "doc_5",
+          "DOC-0006"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Paris public transportation and metro tips",
+        "relevant_documents": [
+          "doc_6",
+          "DOC-0007"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Paris food and transit recommendations",
+        "relevant_documents": [
+          "doc_5",
+          "doc_6",
+          "DOC-0006",
+          "DOC-0007"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.8,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo local food recommendations",
+        "relevant_documents": [
+          "doc_0",
+          "DOC-0001"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo subway and transportation tips",
+        "relevant_documents": [
+          "doc_1",
+          "DOC-0002"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Tokyo cultural etiquette for visitors",
+        "relevant_documents": [
+          "doc_2",
+          "DOC-0003"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Rome hidden gems and unusual places",
+        "relevant_documents": [
+          "doc_13",
+          "DOC-0014"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "Rome safety advice for travelers",
+        "relevant_documents": [
+          "doc_14",
+          "DOC-0015"
+        ],
+        "hit_at_5": 1,
+        "recall_at_5": 1.0,
+        "precision_at_5": 0.4,
+        "mrr_at_5": 1.0
+      },
+      {
+        "query": "London food and dining guide",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "London public transit tips",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Kyoto culture and etiquette tips",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Bangkok hidden gems",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Barcelona travel safety advice",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Cairo local food recommendations",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      },
+      {
+        "query": "Reykjavik transportation information",
+        "relevant_documents": [],
+        "hit_at_5": 0,
+        "recall_at_5": 0,
+        "precision_at_5": 0.0,
+        "mrr_at_5": 0
+      }
+    ]
+  }
+}
