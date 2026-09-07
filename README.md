@@ -120,7 +120,7 @@ Telemetry + User Feedback
 
 ![Monitoring Dashboard](assets/dashboard_screenshot.png)
 
-![Monitoring Dashboard](assets/dashboard_screenshot2.png)
+![Monitoring Dashboard](assets/user_feedback.png)
 ## Advanced Features & Optimizations
 
 ### 1. Query Rewriting
